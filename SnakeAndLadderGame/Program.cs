@@ -18,8 +18,9 @@ namespace SnakeAndLadderGame
             int diceRoll = random.Next(1,7);
             Console.WriteLine("Rolled Dice number is:" + diceRoll);
             int choice = random.Next(0,3);
+        
 
-            switch (choice)
+                switch (choice)
             {
                 case Snake:
                     position -= diceRoll;
@@ -39,7 +40,6 @@ namespace SnakeAndLadderGame
                     Console.WriteLine("Player 1 position : " + position);
                     break;
                 case NoGame:
-                    position += diceRoll;
                     Console.WriteLine("Its a NoGame");
                     Console.WriteLine("Player 1 position : " + position);
                     break;
