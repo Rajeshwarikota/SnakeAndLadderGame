@@ -40,16 +40,18 @@ namespace SnakeAndLadderGame
                     case Ladder:
                         position += diceRoll;
                         Console.WriteLine("Its a ladder");
-                        if (position >= 100)
+                        if (position == 100)
                         {
-                            position = 100;
-                            Console.WriteLine("Player 1 position : " + position);
                             Console.WriteLine("Player 1 wins");
-
                         }
-                        else
+                        else if (position > 100)
                         {
+                            position -= diceRoll;
                             Console.WriteLine("Player 1 position : " + position);
+                        }
+                        else 
+                        {
+                        Console.WriteLine("Player 1 position :" + position);
                         }
                         break;
                     case NoGame:
